@@ -1,2 +1,2 @@
 # Write your MySQL query statement below
-Select user_id,concat(upper(Substring(name,1,1)),lower(substring(name,2,10))) as name from Users order by user_id
+Select user_id,concat(upper(left(name,1)),lower(right(name,length(name)-1))) as name from Users order by user_id
